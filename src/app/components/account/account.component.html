@@ -1,0 +1,32 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Account Table</h4>
+                        <p class="card-category"> A listing of All accounts</p>
+                    </div>
+                    <div class="card-body" *ngIf="accountData.length">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th *ngFor="let header of accountColumns">
+                                        {{header}}
+                                    </th>
+                                <tbody>
+                                    <tr *ngFor="let account of accountData">
+                                        <td> {{account.account_id}}</td>
+                                        <td> {{account.limit}}</td>
+                                        <td> {{account.products}}</td>
+                                        <td>Details</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
